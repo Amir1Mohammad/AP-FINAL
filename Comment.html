@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Language" content="fa" />
+<head>
+<style>
+
+body {
+    background-image: url("TehraneZiba.jpg");
+}
+
+#header {
+    background-color:green;
+    color:#F8E0F7;
+    text-align:center;
+    padding:5px;
+}
+
+#section {
+    width:350px;
+    float:center;
+    padding:10px;	 	 
+}
+#footer {
+    background-color:black;
+    color:green;
+    clear:both;
+    text-align:center;
+   padding:5px;	 	 
+}
+</style>
+</head>
+<body>
+
+
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+
+
+
+
+<div id="header">
+<h1>Get Comment</h1>
+</div>
+
+    
+<div align = "right">
+	<div id="section">
+		
+<div ng-app="myApp" ng-controller="myCtrl">
+<div class="center">
+		
+<h2>
+	<p><h2>
+	فرم ثبت شکایت {{firstName + " " + lastName}}
+	</p>
+</h2>
+
+
+
+<form action="demo_form.asp" method="post">
+	<b>نام<br></b>
+	<input type="text" ng-model="firstName" name="firstname" required>
+	<br>
+	<b>نام خانوادگی<br></b>
+	<input type="text" ng-model="lastName" name="lastname" required>
+	</form>
+	<br>
+
+	<b><input type = "radio" name ="Sex"> مرد</b>
+	<b><input type = "radio" name ="Sex"> زن</b>
+	<br>
+	
+	
+	<b>سن </b>
+	<input type="number" name="age" min = "12" max = "85" placeholder="AGE">
+	<br><br>
+	<br><br>
+
+	
+	
+	<b>میزان تحصیلات</b>
+	<select name="cars">Tahsilat :<br>
+	<option value="11">زیر دیپلم</option>
+	<option value="22">دیپلم</option>
+	<option value="33">فوق دیپلم</option>
+	<option value="44">لیسانس</option>
+	<option value="55">فوق لیسانس  یا بالاتر</option>
+	</select>
+	<br><br>
+
+
+
+
+
+
+	<div><b>E-mail </b></div>
+	<input type="email" name="email" placeholder="Email@source.domain" required>
+	<br>
+	<br>
+	<div>
+	<b> شماره تماس </b><br>
+	<input type : 'text' name = "phone" placeholder = "Phone Number" required>
+	</div>
+	<br><br>
+	<b>شکایت شما<br></b>
+	<textarea name="comment" id="commentText" class="commentText" style="" placeholder="Write your Nazar" required></textarea><br>
+	<br>
+	<b>آدرس دقیق محل </b><br>
+	<textarea name="comment" id="commentText" class="commentText" style="" placeholder="Write your address" required></textarea><br>
+
+	<br><br>
+
+	<b> منطقه </b>
+	<input type="number" name="quantity" min="1" max="22" required>
+	<br>
+	<br>
+	<div>
+	<br>
+	<br>
+	</div>
+	
+	
+	
+	<h2>
+	فرم ثبت شده توسط {{firstName + " " + lastName}}
+	</div>
+	</h2>
+
+	<input type="submit" value="ارسال نظر ثبت شده" onclick="alert('شکایت شما با موفقیت ذخیره و ارسال شد  . ')"></button>
+	</div>
+
+
+	<br><br><br><br>
+	</head>
+	<body>
+</div>
+
+
+
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.firstName= " ";
+    $scope.lastName= " ";
+});
+</script>
+
+</div>
+
+<div id="footer">
+Designed By Cloner
+</div>
+
+</body>
+</html>
