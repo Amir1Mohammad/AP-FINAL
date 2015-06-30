@@ -13,9 +13,35 @@ body {
     background-attachment: fixed;
     background-position: center; 
 }
-p {
-    color: orange;
+h1 {
+    color: white;
     text-align: center;
+}
+@font-face {
+    font-family: myFirstFont;
+    src: url(BYekan.woff);
+}
+h2 {
+    font-family: myFirstFont;
+}
+div.transbox
+{
+  margin: 150px;
+  background-color: white;
+  border: 10px solid black;
+  opacity:0.7;
+  filter:alpha(opacity=60);
+  z-index:-1;
+}
+
+
+div.transbox h2
+{
+	
+  margin: 5%;
+  font-weight: bold;
+  color: blue;
+  z-index:-1;
 }
 
 
@@ -25,8 +51,9 @@ p {
 
 
 </center>
-
-<p id="demo"></p>
+<div class="transbox1">
+<h1 id="demo"></h1>
+</div>
 <script>
 document.getElementById("demo").innerHTML = Date();
 </script>
@@ -66,17 +93,22 @@ $(document).ready(function(){
 <div align = 'center'>
 <button div id = 'flip'>برای ثبت شکایت خود اینجا را کلیک نمایید</button>
 </div>
+<h2>
 <a href = 'file:///home/cloner/Desktop/Final%20AP/Ersal.html'>
 	<div id="panel"><input type="button" value="ثبت شکایت" onclick="newDoc()"></div></a>
- 
+ </h2>
 <div align = "right">
 
-<p>
+<div class="transbox">
+<h2>
 همشهری گرامی:
 از آنجاییکه شهرداری خود را موظف به پاسخگویی به سوالات , رفع مشکلات و شنیدن
 انتقادات و پیشنهادات شما همشهریان میداند این سیستم برای برقراری ارتباط هر چه بهتر 
 و سریع تر  و پاسخگویی مناسب به شما راه اندازی شده است .
-</p>
+</h2>
+ </div>
+
+
 
 </div>
 
